@@ -1,6 +1,7 @@
 import { useDispatch } from "react-redux";
 import s from "./Contact.module.css";
-import { deleteContact } from "../../../redux/contactsSlice";
+import { deleteContact } from "../../../redux/contactsOps";
+
 const Contact = ({ contact }) => {
   const name = contact.name;
   const number = contact.number;
@@ -9,7 +10,7 @@ const Contact = ({ contact }) => {
   return (
     <li className={s.contact}>
       <p className="title">{name}</p>
-      <p className="Phon">{number}</p>
+      <p className="telefon">{number}</p>
       <button
         type="button"
         className="button"
